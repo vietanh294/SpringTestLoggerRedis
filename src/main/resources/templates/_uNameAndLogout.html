@@ -1,0 +1,6 @@
+<div xmlns:th="http://www.thymeleaf.org" class="user-bar">
+  <span>Username:</span>
+  <span th:utext="${#request.userPrincipal.name}"></span>
+  <br>
+  <p class="text-center" style="margin-bottom: 0px;"><a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Đăng xuất</a></p>
+</div>
